@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="FreeCRM">
   <listeners>    
-    <listener class-name="com.Utilities.TestngListners" />
+    <listener class-name="com.Utilities.ExtentReporterNG" />
   </listeners>
 
   <test thread-count="5" name="Free CRM Test">
     <classes>
-      <class name="com.Tests.LoginPageTest"/>
+      <class name="com.Tests.LoginTest2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

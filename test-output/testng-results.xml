@@ -1,73 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="150757" started-at="2018-01-03T20:57:22Z" finished-at="2018-01-03T20:59:53Z">
+  <suite name="FreeCRM" duration-ms="59422" started-at="2018-01-04T14:53:16Z" finished-at="2018-01-04T14:54:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="150757" started-at="2018-01-03T20:57:22Z" finished-at="2018-01-03T20:59:53Z">
-      <class name="com.Tests.LoginPageTest">
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="StartUp" is-config="true" duration-ms="70760" started-at="2018-01-04T02:27:22Z" finished-at="2018-01-04T02:28:33Z">
+    <test name="Free CRM Test" duration-ms="59422" started-at="2018-01-04T14:53:16Z" finished-at="2018-01-04T14:54:16Z">
+      <class name="com.Tests.LoginTest2">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="StartUp" is-config="true" duration-ms="27509" started-at="2018-01-04T20:23:16Z" finished-at="2018-01-04T20:23:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="Logoverify()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="Logoverify" duration-ms="3617" started-at="2018-01-04T02:28:33Z" finished-at="2018-01-04T02:28:37Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="Login" duration-ms="20237" started-at="2018-01-04T20:23:44Z" finished-at="2018-01-04T20:24:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logoverify -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="TearDown" is-config="true" duration-ms="1202" started-at="2018-01-04T02:28:37Z" finished-at="2018-01-04T02:28:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="StartUp" is-config="true" duration-ms="18232" started-at="2018-01-04T02:28:45Z" finished-at="2018-01-04T02:29:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="LoginTest" duration-ms="17644" started-at="2018-01-04T02:29:03Z" data-provider="LoginTest" finished-at="2018-01-04T02:29:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Nawaz]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Nawaz123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="TearDown" is-config="true" duration-ms="869" started-at="2018-01-04T02:29:21Z" finished-at="2018-01-04T02:29:22Z">
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="TearDown" is-config="true" duration-ms="7959" started-at="2018-01-04T20:24:04Z" finished-at="2018-01-04T20:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="StartUp" is-config="true" duration-ms="15350" started-at="2018-01-04T02:29:22Z" finished-at="2018-01-04T02:29:37Z">
+      </class> <!-- com.Tests.LoginTest2 -->
+      <class name="com.Utilities.SendMail">
+        <test-method status="PASS" signature="SendEmail()[pri:0, instance:com.Utilities.SendMail@4883b407]" name="SendEmail" duration-ms="3687" started-at="2018-01-04T20:24:12Z" finished-at="2018-01-04T20:24:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="LoginTest" duration-ms="15012" started-at="2018-01-04T02:29:37Z" data-provider="LoginTest" finished-at="2018-01-04T02:29:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shanawazmansuri]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Aalahazrat@25]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@475530b9]" name="TearDown" is-config="true" duration-ms="842" started-at="2018-01-04T02:29:52Z" finished-at="2018-01-04T02:29:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- com.Tests.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- SendEmail -->
+      </class> <!-- com.Utilities.SendMail -->
+    </test> <!-- Free CRM Test -->
+  </suite> <!-- FreeCRM -->
 </testng-results>

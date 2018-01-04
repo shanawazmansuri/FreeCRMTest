@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Utilities.ExtentReport">
+      <class name="com.Tests.LoginTest2">
         <methods>
-          <include name="failTest"/>
-          <include name="getResult"/>
-          <include name="skipTest"/>
-          <include name="endReport"/>
-          <include name="startReport"/>
+          <include name="TearDown"/>
+          <include name="Login"/>
+          <include name="StartUp"/>
         </methods>
-      </class> <!-- com.Utilities.ExtentReport -->
+      </class> <!-- com.Tests.LoginTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

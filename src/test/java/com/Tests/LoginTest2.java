@@ -2,12 +2,14 @@ package com.Tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.BasePage.Basepage;
 import com.Page.Elements.LoginPageElements;
 import com.Utilities.PropertiesFile;
 
+@Listeners(com.Utilities.ExtentReporterNG.class)
 public class LoginTest2 extends Basepage {
 	LoginPageElements Logele;
 	PropertiesFile Pro;
