@@ -3,6 +3,7 @@
 <suite name="FreeCRM">
   <listeners>    
     <listener class-name="com.Utilities.ExtentReporterNG" />
+    <listener class-name="com.Utilities.TestngListners" />
   </listeners>
 
   <test thread-count="5" name="Free CRM Test">

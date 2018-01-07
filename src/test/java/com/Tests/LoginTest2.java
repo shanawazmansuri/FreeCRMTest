@@ -13,19 +13,24 @@ import com.Utilities.PropertiesFile;
 public class LoginTest2 extends Basepage {
 	LoginPageElements Logele;
 	PropertiesFile Pro;
+	// Logger log = Logger.getLogger(LoginTest2.class);
 
 	@BeforeMethod
 	public void StartUp() {
 
 		Browser("chrome", "https://www.freecrm.com/index.html");
+		// log.info("browser is launching");
 		MaximizeBrowser();
+		// log.fatal("Its Fatal Maximizing Browser");
 		DeleteCookies();
+		// log.warn("Warn its Deleting Cookies");
 		WaitPageLoadTimeout(20);
 		Implicitwait(20);
 	}
 
 	@Test
 	public void Login() {
+		// log.info("***************Starting Test Case***********************");
 		Logele = new LoginPageElements(driver);
 		Pro = new PropertiesFile();
 		enterText(Logele.UsrId(), Pro.prop.getProperty("usrname"));
@@ -33,6 +38,7 @@ public class LoginTest2 extends Basepage {
 		Wait(2000);
 		Click(Logele.LgnBtn());
 		Wait(3000);
+		// log.info("***************Ending Test Case***********************");
 	}
 
 	@AfterMethod

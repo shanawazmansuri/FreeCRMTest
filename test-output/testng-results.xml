@@ -1,31 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[About to begin executing Suite FreeCRM]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing Test Free CRM Test]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : LoginTest2.StartUp]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : LoginTest2.StartUp]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : LoginTest2.Login]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : LoginTest2.Login]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in com.Tests.LoginTest2]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : LoginTest2.TearDown]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : LoginTest2.TearDown]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing test Free CRM Test]]>
+    </line>
+    <line>
+      <![CDATA[About to end executing Suite FreeCRM]]>
+    </line>
   </reporter-output>
-  <suite name="FreeCRM" duration-ms="59422" started-at="2018-01-04T14:53:16Z" finished-at="2018-01-04T14:54:16Z">
+  <suite name="FreeCRM" duration-ms="37733" started-at="2018-01-07T18:40:01Z" finished-at="2018-01-07T18:40:39Z">
     <groups>
     </groups>
-    <test name="Free CRM Test" duration-ms="59422" started-at="2018-01-04T14:53:16Z" finished-at="2018-01-04T14:54:16Z">
+    <test name="Free CRM Test" duration-ms="37733" started-at="2018-01-07T18:40:01Z" finished-at="2018-01-07T18:40:39Z">
       <class name="com.Tests.LoginTest2">
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="StartUp" is-config="true" duration-ms="27509" started-at="2018-01-04T20:23:16Z" finished-at="2018-01-04T20:23:44Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginTest2@ae45eb6]" name="StartUp" is-config="true" duration-ms="17353" started-at="2018-01-08T00:10:01Z" finished-at="2018-01-08T00:10:19Z">
           <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : LoginTest2.StartUp]]>
+            </line>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="Login" duration-ms="20237" started-at="2018-01-04T20:23:44Z" finished-at="2018-01-04T20:24:04Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginTest2@ae45eb6]" name="Login" duration-ms="19596" started-at="2018-01-08T00:10:19Z" finished-at="2018-01-08T00:10:38Z">
           <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : LoginTest2.Login]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.Tests.LoginTest2]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : LoginTest2.TearDown]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginTest2@1e88b3c]" name="TearDown" is-config="true" duration-ms="7959" started-at="2018-01-04T20:24:04Z" finished-at="2018-01-04T20:24:12Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginTest2@ae45eb6]" name="TearDown" is-config="true" duration-ms="753" started-at="2018-01-08T00:10:38Z" finished-at="2018-01-08T00:10:39Z">
           <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : LoginTest2.TearDown]]>
+            </line>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- com.Tests.LoginTest2 -->
-      <class name="com.Utilities.SendMail">
-        <test-method status="PASS" signature="SendEmail()[pri:0, instance:com.Utilities.SendMail@4883b407]" name="SendEmail" duration-ms="3687" started-at="2018-01-04T20:24:12Z" finished-at="2018-01-04T20:24:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SendEmail -->
-      </class> <!-- com.Utilities.SendMail -->
     </test> <!-- Free CRM Test -->
   </suite> <!-- FreeCRM -->
 </testng-results>

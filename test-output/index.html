@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,11 +102,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FreeCRM" title="com.Tests.LoginTest2" hash-for-method="Login">Login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM" title="com.Utilities.SendMail" hash-for-method="SendEmail">SendEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FreeCRM -->
@@ -121,21 +116,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FreeCRM" class="panel FreeCRM">
-          <div class="suite-FreeCRM-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.Utilities.SendMail</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SendEmail">
-                  </a> <!-- SendEmail -->
-                  <span class="method-name">SendEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FreeCRM-class-passed -->
           <div class="suite-FreeCRM-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -163,11 +143,11 @@
 &lt;suite name=&quot;FreeCRM&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.Utilities.ExtentReporterNG&quot;/&gt;
+    &lt;listener class-name=&quot;com.Utilities.TestngListners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Free CRM Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.Tests.LoginTest2&quot;/&gt;
-      &lt;class name=&quot;com.Utilities.SendMail&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Free CRM Test --&gt;
 &lt;/suite&gt; &lt;!-- FreeCRM --&gt;
@@ -181,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Free CRM Test (2 classes)</span>
+                <span class="test-name">Free CRM Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,20 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login')
 data.setCell(0, 2, 'com.Tests.LoginTest2')
-data.setCell(0, 3, 20237);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SendEmail')
-data.setCell(1, 2, 'com.Utilities.SendMail')
-data.setCell(1, 3, 3687);
+data.setCell(0, 3, 19596);
 window.suiteTableData['FreeCRM']= { tableData: data, tableDiv: 'times-div-FreeCRM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-FreeCRM">
               </div> <!-- times-div-FreeCRM -->
             </div> <!-- times-div -->
@@ -231,6 +207,15 @@ return data;
             <span class="header-content">Reporter output for FreeCRM</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Login</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Completed executing following method : LoginTest2.Login</span>
+                <span class="reporter-method-output">Test Method resides in com.Tests.LoginTest2</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+                <span class="reporter-method-output">About to begin executing following method : LoginTest2.TearDown</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-FreeCRM" class="panel">
@@ -253,19 +238,12 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Login</span>
-                <span class="method-start">27509 ms</span>
+                <span class="method-start">17353 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">47746 ms</span>
+                <span class="method-start">36949 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.Utilities.SendMail</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">SendEmail</span>
-                <span class="method-start">55705 ms</span>
-              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
