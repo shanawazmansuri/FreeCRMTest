@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-FreeCRM">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM" title="com.Tests.LoginTest2" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM" title="com.Tests.ForgotPwdTest" hash-for-method="InValidUsrFrgtPwd">InValidUsrFrgtPwd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM" title="com.Tests.ForgotPwdTest" hash-for-method="ValidUsrFrgtPwd">ValidUsrFrgtPwd</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FreeCRM -->
@@ -119,14 +124,25 @@
           <div class="suite-FreeCRM-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.Tests.LoginTest2</span>
+              <span class="class-name">com.Tests.ForgotPwdTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
+                  <a name="InValidUsrFrgtPwd">
+                  </a> <!-- InValidUsrFrgtPwd -->
+                  <span class="method-name">InValidUsrFrgtPwd</span>
+                  <em>
+(Verify forgot pwd wih Invalid login Id)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidUsrFrgtPwd">
+                  </a> <!-- ValidUsrFrgtPwd -->
+                  <span class="method-name">ValidUsrFrgtPwd</span>
+                  <em>
+(Verify forgot pwd wih valid login Id)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,7 +163,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Free CRM Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.Tests.LoginTest2&quot;/&gt;
+      &lt;class name=&quot;com.Tests.ForgotPwdTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Free CRM Test --&gt;
 &lt;/suite&gt; &lt;!-- FreeCRM --&gt;
@@ -187,16 +203,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'com.Tests.LoginTest2')
-data.setCell(0, 3, 19596);
+data.setCell(0, 1, 'ValidUsrFrgtPwd')
+data.setCell(0, 2, 'com.Tests.ForgotPwdTest')
+data.setCell(0, 3, 12804);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'InValidUsrFrgtPwd')
+data.setCell(1, 2, 'com.Tests.ForgotPwdTest')
+data.setCell(1, 3, 9999);
 window.suiteTableData['FreeCRM']= { tableData: data, tableDiv: 'times-div-FreeCRM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-FreeCRM">
               </div> <!-- times-div-FreeCRM -->
             </div> <!-- times-div -->
@@ -208,12 +228,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">Login</span>
+              <span class="reporter-method-name">ValidUsrFrgtPwd</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Completed executing following method : LoginTest2.Login</span>
-                <span class="reporter-method-output">Test Method resides in com.Tests.LoginTest2</span>
+                <span class="reporter-method-output">Completed executing following method : ForgotPwdTest.ValidUsrFrgtPwd</span>
+                <span class="reporter-method-output">Test Method resides in com.Tests.ForgotPwdTest</span>
                 <span class="reporter-method-output">Test Status: Pass</span>
-                <span class="reporter-method-output">About to begin executing following method : LoginTest2.TearDown</span>
+                <span class="reporter-method-output">About to begin executing following method : ForgotPwdTest.TearDown</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">InValidUsrFrgtPwd</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Completed executing following method : ForgotPwdTest.InValidUsrFrgtPwd</span>
+                <span class="reporter-method-output">Test Method resides in com.Tests.ForgotPwdTest</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+                <span class="reporter-method-output">About to begin executing following method : ForgotPwdTest.TearDown</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,18 +260,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Tests.LoginTest2</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.Tests.ForgotPwdTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">StartUp</span>
+                <span class="method-name">Startup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Login</span>
-                <span class="method-start">17353 ms</span>
+                <span class="method-name">ValidUsrFrgtPwd</span>
+                <span class="method-start">18977 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">36949 ms</span>
+                <span class="method-start">31781 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Startup</span>
+                <span class="method-start">34428 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InValidUsrFrgtPwd</span>
+                <span class="method-start">49617 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">59621 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

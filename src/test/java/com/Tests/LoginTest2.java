@@ -1,5 +1,6 @@
 package com.Tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -30,15 +31,16 @@ public class LoginTest2 extends Basepage {
 
 	@Test
 	public void Login() {
-		// log.info("***************Starting Test Case***********************");
-		Logele = new LoginPageElements(driver);
-		Pro = new PropertiesFile();
-		enterText(Logele.UsrId(), Pro.prop.getProperty("usrname"));
-		enterText(Logele.Pwd(), Pro.prop.getProperty("pwd"));
-		Wait(2000);
-		Click(Logele.LgnBtn());
-		Wait(3000);
-		// log.info("***************Ending Test Case***********************");
+
+		WebElement FrgPwdLnk = PartialLinkText("Forgot Password?");
+		FrgPwdLnk.click();
+		WebElement Usrname = Xpath("//input[@name='username'and@size='25']");
+		enterText(Usrname, "shanawazmansuri1");
+		WebElement GetPwdBtn = Xpath("//input[@value='Get Password']");
+		Click(GetPwdBtn);
+		WebElement msg = Xpath("//div[@id='message']");
+		String message = Gettext(msg);
+		System.out.println(message);
 	}
 
 	@AfterMethod

@@ -8,7 +8,7 @@
 
   <test thread-count="5" name="Free CRM Test">
     <classes>
-      <class name="com.Tests.LoginTest2"/>
+      <class name="com.Tests.ForgotPwdTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
