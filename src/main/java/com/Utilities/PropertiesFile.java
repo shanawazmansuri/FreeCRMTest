@@ -7,14 +7,14 @@ import java.util.Properties;
 
 public class PropertiesFile {
 
-	public Properties Loginprop;
+	public Properties prop;
 
 	public PropertiesFile() {
 		try {
-			Loginprop = new Properties();
+			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java/com/Config/LoginPage.properties");
-			Loginprop.load(ip);
+					System.getProperty("user.dir") + "/src/main/java/com/Config/Elements.properties");
+			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

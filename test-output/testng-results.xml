@@ -1,133 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
-    <line>
-      <![CDATA[About to begin executing Suite FreeCRM]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing Test Free CRM Test]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.Startup]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.Startup]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.ValidUsrFrgtPwd]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.ValidUsrFrgtPwd]]>
-    </line>
-    <line>
-      <![CDATA[Test Method resides in com.Tests.ForgotPwdTest]]>
-    </line>
-    <line>
-      <![CDATA[Test Status: Pass]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.TearDown]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.TearDown]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.Startup]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.Startup]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.InValidUsrFrgtPwd]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.InValidUsrFrgtPwd]]>
-    </line>
-    <line>
-      <![CDATA[Test Method resides in com.Tests.ForgotPwdTest]]>
-    </line>
-    <line>
-      <![CDATA[Test Status: Pass]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ForgotPwdTest.TearDown]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ForgotPwdTest.TearDown]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing test Free CRM Test]]>
-    </line>
-    <line>
-      <![CDATA[About to end executing Suite FreeCRM]]>
-    </line>
   </reporter-output>
-  <suite name="FreeCRM" duration-ms="61742" started-at="2018-01-10T07:25:51Z" finished-at="2018-01-10T07:26:52Z">
+  <suite name="Default suite" duration-ms="257384" started-at="2018-01-12T05:54:31Z" finished-at="2018-01-12T05:58:48Z">
     <groups>
     </groups>
-    <test name="Free CRM Test" duration-ms="61742" started-at="2018-01-10T07:25:51Z" finished-at="2018-01-10T07:26:52Z">
-      <class name="com.Tests.ForgotPwdTest">
-        <test-method status="PASS" signature="Startup()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="Startup" is-config="true" duration-ms="18977" started-at="2018-01-10T12:55:51Z" finished-at="2018-01-10T12:56:10Z">
+    <test name="Default test" duration-ms="257384" started-at="2018-01-12T05:54:31Z" finished-at="2018-01-12T05:58:48Z">
+      <class name="com.Tests.LoginPageTest">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="56931" started-at="2018-01-12T11:24:31Z" finished-at="2018-01-12T11:25:28Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.Startup]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Startup -->
-        <test-method status="PASS" signature="ValidUsrFrgtPwd()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="ValidUsrFrgtPwd" duration-ms="12804" started-at="2018-01-10T12:56:10Z" description="Verify forgot pwd wih valid login Id" finished-at="2018-01-10T12:56:22Z">
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="Logoverify()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="Logoverify" duration-ms="30839" started-at="2018-01-12T11:25:28Z" finished-at="2018-01-12T11:25:58Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.ValidUsrFrgtPwd]]>
-            </line>
-            <line>
-              <![CDATA[Test Method resides in com.Tests.ForgotPwdTest]]>
-            </line>
-            <line>
-              <![CDATA[Test Status: Pass]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : ForgotPwdTest.TearDown]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- ValidUsrFrgtPwd -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="TearDown" is-config="true" duration-ms="2647" started-at="2018-01-10T12:56:22Z" finished-at="2018-01-10T12:56:25Z">
+        </test-method> <!-- Logoverify -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1562" started-at="2018-01-12T11:25:58Z" finished-at="2018-01-12T11:26:00Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.TearDown]]>
-            </line>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="Startup()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="Startup" is-config="true" duration-ms="15189" started-at="2018-01-10T12:56:25Z" finished-at="2018-01-10T12:56:40Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="23769" started-at="2018-01-12T11:26:13Z" finished-at="2018-01-12T11:26:37Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.Startup]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Startup -->
-        <test-method status="PASS" signature="InValidUsrFrgtPwd()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="InValidUsrFrgtPwd" duration-ms="9999" started-at="2018-01-10T12:56:40Z" description="Verify forgot pwd wih Invalid login Id" finished-at="2018-01-10T12:56:50Z">
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="13760" started-at="2018-01-12T11:26:37Z" data-provider="LoginTest" finished-at="2018-01-12T11:26:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Noorma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Demo123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.InValidUsrFrgtPwd]]>
-            </line>
-            <line>
-              <![CDATA[Test Method resides in com.Tests.ForgotPwdTest]]>
-            </line>
-            <line>
-              <![CDATA[Test Status: Pass]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : ForgotPwdTest.TearDown]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- InValidUsrFrgtPwd -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.ForgotPwdTest@26653222]" name="TearDown" is-config="true" duration-ms="2101" started-at="2018-01-10T12:56:50Z" finished-at="2018-01-10T12:56:52Z">
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1128" started-at="2018-01-12T11:26:51Z" finished-at="2018-01-12T11:26:52Z">
           <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ForgotPwdTest.TearDown]]>
-            </line>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.Tests.ForgotPwdTest -->
-    </test> <!-- Free CRM Test -->
-  </suite> <!-- FreeCRM -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="25238" started-at="2018-01-12T11:26:52Z" finished-at="2018-01-12T11:27:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="7652" started-at="2018-01-12T11:27:17Z" data-provider="LoginTest" finished-at="2018-01-12T11:27:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fatima]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Demo123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="857" started-at="2018-01-12T11:27:25Z" finished-at="2018-01-12T11:27:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="18593" started-at="2018-01-12T11:27:25Z" finished-at="2018-01-12T11:27:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="6368" started-at="2018-01-12T11:27:44Z" data-provider="LoginTest" finished-at="2018-01-12T11:27:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aisha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Demo123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1034" started-at="2018-01-12T11:27:50Z" finished-at="2018-01-12T11:27:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="16295" started-at="2018-01-12T11:27:51Z" finished-at="2018-01-12T11:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="6662" started-at="2018-01-12T11:28:08Z" data-provider="LoginTest" finished-at="2018-01-12T11:28:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zehra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Demo123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="789" started-at="2018-01-12T11:28:14Z" finished-at="2018-01-12T11:28:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="14351" started-at="2018-01-12T11:28:15Z" finished-at="2018-01-12T11:28:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="17232" started-at="2018-01-12T11:28:30Z" data-provider="LoginTest" finished-at="2018-01-12T11:28:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanawazmansuri]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aalahazrat@25]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1173" started-at="2018-01-12T11:28:47Z" finished-at="2018-01-12T11:28:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.Tests.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

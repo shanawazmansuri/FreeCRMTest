@@ -52,16 +52,17 @@ public class LoginPageTest extends Basepage {
 	public Object[][] passData() {
 		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\LoginTest.xlsx";
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
-		int rows = excl.getRowCount(0);
+		int rows = excl.getRowCount(1);
 
 		Object[][] data = new Object[rows][2];
 		for (int i = 0; i < rows; i++) {
 
-			data[i][0] = excl.getData(0, i + 1, 0);
-			data[i][1] = excl.getData(0, i + 1, 1);
+			data[i][0] = excl.getData(1, i + 1, 0);
+			data[i][1] = excl.getData(1, i + 1, 1);
 
 		}
 		return data;
 
 	}
+
 }

@@ -16,25 +16,25 @@ public class ForgotPwdElements extends Basepage {
 
 	public WebElement FrgPwdLnk() {
 
-		WebElement FrgPwdLnk = PartialLinkText(pro.Loginprop.getProperty("FrgPwdLnk"));
+		WebElement FrgPwdLnk = PartialLinkText(pro.prop.getProperty("FrgPwdLnk"));
 		return FrgPwdLnk;
 	}
 
 	public WebElement FrgPwdUsrname() {
 
-		WebElement FrgPwdUsrname = Xpath(pro.Loginprop.getProperty("Usrname_FrgPwd"));
+		WebElement FrgPwdUsrname = Xpath(pro.prop.getProperty("Usrname_FrgPwd"));
 		return FrgPwdUsrname;
 	}
 
 	public WebElement GetPwdBtn() {
 
-		WebElement GetPwdBtn = Xpath(pro.Loginprop.getProperty("GetPwdBtn"));
+		WebElement GetPwdBtn = Xpath(pro.prop.getProperty("GetPwdBtn"));
 		return GetPwdBtn;
 	}
 
 	public WebElement GetPwdMsg() {
 
-		WebElement GetPwdMsg = Xpath(pro.Loginprop.getProperty("GetPwdMsg"));
+		WebElement GetPwdMsg = Xpath(pro.prop.getProperty("GetPwdMsg"));
 		return GetPwdMsg;
 	}
 

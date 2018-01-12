@@ -27,7 +27,7 @@ public class ForgotPwdTest extends Basepage {
 	public void ValidUsrFrgtPwd() {
 
 		Click(FrgPwd.FrgPwdLnk());
-		enterText(FrgPwd.FrgPwdUsrname(), pro.Loginprop.getProperty("usrname"));
+		enterText(FrgPwd.FrgPwdUsrname(), pro.prop.getProperty("usrname"));
 		ScreenShot.CaptureScreenshot(driver);
 		Click(FrgPwd.GetPwdBtn());
 		ScreenShot.CaptureScreenshot(driver);
