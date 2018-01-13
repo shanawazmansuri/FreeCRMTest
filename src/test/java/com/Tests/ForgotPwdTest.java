@@ -55,4 +55,5 @@ public class ForgotPwdTest extends Basepage {
 		CloseBrowser();
 
 	}
+
 }

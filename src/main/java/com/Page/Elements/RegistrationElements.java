@@ -1,5 +1,8 @@
 package com.Page.Elements;
 
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.BasePage.Basepage;
@@ -8,9 +11,18 @@ import com.Utilities.PropertiesFile;
 public class RegistrationElements extends Basepage {
 	PropertiesFile pro = new PropertiesFile();
 
+	public RegistrationElements(WebDriver driver) {
+		this.driver = driver;
+	}
+
 	public WebElement SignUpBtn() {
-		WebElement SignUpBtn = Xpath(pro.prop.getProperty("SignUp_Xpath"));
+		WebElement SignUpBtn = Xpath(pro.prop.getProperty("SignUpBtn_Xpath"));
 		return SignUpBtn;
+	}
+
+	public WebElement Edition() {
+		WebElement Edition = Id(pro.prop.getProperty("Edition_Id"));
+		return Edition;
 	}
 
 	public WebElement FirstName() {
@@ -48,8 +60,8 @@ public class RegistrationElements extends Basepage {
 		return PasswordConfirm;
 	}
 
-	public WebElement AgreeTerms() {
-		WebElement AgreeTerms = Name(pro.prop.getProperty("AgreeTerms_Name"));
+	public List<WebElement> AgreeTerms() {
+		List<WebElement> AgreeTerms = Elements(pro.prop.getProperty("AgreeTerms_Xpath"));
 		return AgreeTerms;
 	}
 
@@ -58,4 +70,50 @@ public class RegistrationElements extends Basepage {
 		return SubmitBtn;
 	}
 
+	public WebElement MsgEdition() {
+		WebElement MsgEdition = Xpath(pro.prop.getProperty("MsgEdition_Xpath"));
+		return MsgEdition;
+	}
+
+	public WebElement MsgFirstName() {
+		WebElement MsgFirstName = Xpath(pro.prop.getProperty("MsgFirstName_Xpath"));
+		return MsgFirstName;
+	}
+
+	public WebElement MsgLastName() {
+		WebElement MsgLastName = Xpath(pro.prop.getProperty("MsgLastName_Xpath"));
+		return MsgLastName;
+	}
+
+	public WebElement MsgmEail() {
+		WebElement Msgmail = Xpath(pro.prop.getProperty("MsgEmail_Xpath"));
+		return Msgmail;
+	}
+
+	public WebElement MsgConfEmail() {
+		WebElement MsgConfEmail = Xpath(pro.prop.getProperty("MsgConfEmail_Xpath"));
+		return MsgConfEmail;
+	}
+
+	public WebElement MsgUsername() {
+		WebElement MsgUsername = Xpath(pro.prop.getProperty("MsgUsername_Xpath"));
+		return MsgUsername;
+	}
+
+	public WebElement MsgPassword() {
+		WebElement MsgPassword = Xpath(pro.prop.getProperty("MsgPassword_Xpath"));
+		return MsgPassword;
+	}
+
+	public WebElement MsgConfPassword() {
+		WebElement MsgConfPassword = Xpath(pro.prop.getProperty("MsgConfPassword_Xpath"));
+		return MsgConfPassword;
+	}
+
+	public WebElement MsgAgree() {
+		WebElement MsgAgree = Xpath(pro.prop.getProperty("MsgAgree_Xpath"));
+		return MsgAgree;
+	}
+
 }
+//

@@ -396,8 +396,8 @@ public class Basepage {
 
 	// Enter text//
 
-	public void enterText(WebElement ele, String values) {
-		ele.sendKeys(values);
+	public void enterText(WebElement Element, String Values) {
+		Element.sendKeys(Values);
 
 	}
 

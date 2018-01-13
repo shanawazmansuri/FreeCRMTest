@@ -16,8 +16,8 @@ public class ScreenShot extends Basepage {
 
 	public static void CaptureScreenshot(WebDriver driver) {
 		String path = System.getProperty("user.dir");
-		String scrPath = path + "/ScreenShots/ForgotPwd/";
-		String scrPrefix = "ForgotPwd_";
+		String scrPath = path + "/ScreenShots/RegistrationPage/";
+		String scrPrefix = "RegistrationPage";
 
 		SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		final String timeStamp = date.format(Calendar.getInstance().getTime());

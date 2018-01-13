@@ -1,145 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="257384" started-at="2018-01-12T05:54:31Z" finished-at="2018-01-12T05:58:48Z">
+  <suite name="Default suite" duration-ms="278867" started-at="2018-01-13T12:07:55Z" finished-at="2018-01-13T12:12:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="257384" started-at="2018-01-12T05:54:31Z" finished-at="2018-01-12T05:58:48Z">
-      <class name="com.Tests.LoginPageTest">
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="56931" started-at="2018-01-12T11:24:31Z" finished-at="2018-01-12T11:25:28Z">
+    <test name="Default test" duration-ms="278867" started-at="2018-01-13T12:07:55Z" finished-at="2018-01-13T12:12:34Z">
+      <class name="com.Tests.RegistrationTest">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="15773" started-at="2018-01-13T17:37:55Z" finished-at="2018-01-13T17:38:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="Logoverify()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="Logoverify" duration-ms="30839" started-at="2018-01-12T11:25:28Z" finished-at="2018-01-12T11:25:58Z">
+        <test-method status="PASS" signature="FieldMessageValidate()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="FieldMessageValidate" duration-ms="11454" started-at="2018-01-13T17:38:11Z" finished-at="2018-01-13T17:38:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logoverify -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1562" started-at="2018-01-12T11:25:58Z" finished-at="2018-01-12T11:26:00Z">
+        </test-method> <!-- FieldMessageValidate -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2370" started-at="2018-01-13T17:38:22Z" finished-at="2018-01-13T17:38:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="23769" started-at="2018-01-12T11:26:13Z" finished-at="2018-01-12T11:26:37Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="13635" started-at="2018-01-13T17:38:25Z" finished-at="2018-01-13T17:38:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="13760" started-at="2018-01-12T11:26:37Z" data-provider="LoginTest" finished-at="2018-01-12T11:26:51Z">
+        <test-method status="PASS" signature="ValidateSubmitBtnAgreeEditionMsg()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="ValidateSubmitBtnAgreeEditionMsg" duration-ms="12041" started-at="2018-01-13T17:38:38Z" finished-at="2018-01-13T17:38:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateSubmitBtnAgreeEditionMsg -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2415" started-at="2018-01-13T17:38:50Z" finished-at="2018-01-13T17:38:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="14044" started-at="2018-01-13T17:38:54Z" finished-at="2018-01-13T17:39:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="CreateRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="CreateRegistration" duration-ms="11462" started-at="2018-01-13T17:39:08Z" data-provider="DataEntry" finished-at="2018-01-13T17:39:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Noorma]]>
+                <![CDATA[Free Edition]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Demo123]]>
+                <![CDATA[Shanawaz]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mansuri]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[shanawaz@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[shanawaz@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[shanawazmans]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[agreeTerms]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1128" started-at="2018-01-12T11:26:51Z" finished-at="2018-01-12T11:26:52Z">
+        </test-method> <!-- CreateRegistration -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2372" started-at="2018-01-13T17:39:20Z" finished-at="2018-01-13T17:39:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="25238" started-at="2018-01-12T11:26:52Z" finished-at="2018-01-12T11:27:17Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="14491" started-at="2018-01-13T17:39:22Z" finished-at="2018-01-13T17:39:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="7652" started-at="2018-01-12T11:27:17Z" data-provider="LoginTest" finished-at="2018-01-12T11:27:25Z">
+        <test-method status="PASS" signature="CreateRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="CreateRegistration" duration-ms="11668" started-at="2018-01-13T17:39:37Z" data-provider="DataEntry" finished-at="2018-01-13T17:39:48Z">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[Edition]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mohammed]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mansuri]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mohammed@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Mohammed@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[MohammedHusain]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateRegistration -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2330" started-at="2018-01-13T17:39:48Z" finished-at="2018-01-13T17:39:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="15120" started-at="2018-01-13T17:39:51Z" finished-at="2018-01-13T17:40:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="CreateRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="CreateRegistration" duration-ms="12827" started-at="2018-01-13T17:40:06Z" data-provider="DataEntry" finished-at="2018-01-13T17:40:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Free Edition]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nilofer]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mansuri]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nilofer@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Nilofer@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NiloferShanawaz]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[agreeTerms]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateRegistration -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2378" started-at="2018-01-13T17:40:19Z" finished-at="2018-01-13T17:40:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="49981" started-at="2018-01-13T17:40:21Z" finished-at="2018-01-13T17:41:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="CreateRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="CreateRegistration" duration-ms="12139" started-at="2018-01-13T17:41:11Z" data-provider="DataEntry" finished-at="2018-01-13T17:41:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edition]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noor]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mansuri]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Noor@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Noor@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NoorFatima]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[agreeTerms]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateRegistration -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2348" started-at="2018-01-13T17:41:23Z" finished-at="2018-01-13T17:41:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="13413" started-at="2018-01-13T17:41:25Z" finished-at="2018-01-13T17:41:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="CreateRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="CreateRegistration" duration-ms="11314" started-at="2018-01-13T17:41:39Z" data-provider="DataEntry" finished-at="2018-01-13T17:41:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CRMPRO - $29.95 user/mo.]]>
+              </value>
+            </param>
+            <param index="1">
               <value>
                 <![CDATA[Fatima]]>
               </value>
             </param>
-            <param index="1">
+            <param index="2">
               <value>
-                <![CDATA[Demo123]]>
+                <![CDATA[Mansuri]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Fatima@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Fatima@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Fatima]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Aalahazrat@1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[No]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="857" started-at="2018-01-12T11:27:25Z" finished-at="2018-01-12T11:27:25Z">
+        </test-method> <!-- CreateRegistration -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2353" started-at="2018-01-13T17:41:50Z" finished-at="2018-01-13T17:41:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="18593" started-at="2018-01-12T11:27:25Z" finished-at="2018-01-12T11:27:44Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="14132" started-at="2018-01-13T17:41:52Z" finished-at="2018-01-13T17:42:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="6368" started-at="2018-01-12T11:27:44Z" data-provider="LoginTest" finished-at="2018-01-12T11:27:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Aisha]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Demo123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="EditionValues()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="EditionValues" duration-ms="5545" started-at="2018-01-13T17:42:07Z" finished-at="2018-01-13T17:42:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1034" started-at="2018-01-12T11:27:50Z" finished-at="2018-01-12T11:27:51Z">
+        </test-method> <!-- EditionValues -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="2370" started-at="2018-01-13T17:42:12Z" finished-at="2018-01-13T17:42:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="16295" started-at="2018-01-12T11:27:51Z" finished-at="2018-01-12T11:28:08Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="13891" started-at="2018-01-13T17:42:15Z" finished-at="2018-01-13T17:42:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="6662" started-at="2018-01-12T11:28:08Z" data-provider="LoginTest" finished-at="2018-01-12T11:28:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Zehra]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Demo123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="ValiadteIAgreeSelected()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="ValiadteIAgreeSelected" duration-ms="5322" started-at="2018-01-13T17:42:28Z" finished-at="2018-01-13T17:42:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="789" started-at="2018-01-12T11:28:14Z" finished-at="2018-01-12T11:28:15Z">
+        </test-method> <!-- ValiadteIAgreeSelected -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.RegistrationTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="116" started-at="2018-01-13T17:42:34Z" finished-at="2018-01-13T17:42:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="14351" started-at="2018-01-12T11:28:15Z" finished-at="2018-01-12T11:28:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String)[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="LoginTest" duration-ms="17232" started-at="2018-01-12T11:28:30Z" data-provider="LoginTest" finished-at="2018-01-12T11:28:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shanawazmansuri]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Aalahazrat@25]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1173" started-at="2018-01-12T11:28:47Z" finished-at="2018-01-12T11:28:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- com.Tests.LoginPageTest -->
+      </class> <!-- com.Tests.RegistrationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
