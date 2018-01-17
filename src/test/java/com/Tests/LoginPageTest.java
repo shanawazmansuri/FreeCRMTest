@@ -11,11 +11,13 @@ import org.testng.annotations.Test;
 import com.BasePage.Basepage;
 import com.Page.Elements.LoginPageElements;
 import com.Utilities.ExcelDataConfig;
+import com.Utilities.PropertiesFile;
 import com.Utilities.ScreenShot;
 
 @Listeners(com.Utilities.ExtentReporterNG.class)
 public class LoginPageTest extends Basepage {
 	LoginPageElements Logele = new LoginPageElements(driver);
+	PropertiesFile lp = new PropertiesFile();
 
 	@BeforeMethod
 	public void StartUp() {
@@ -63,6 +65,12 @@ public class LoginPageTest extends Basepage {
 		}
 		return data;
 
+	}
+
+	public void Login() {
+		enterText(Logele.UsrId(), lp.prop.getProperty("usrname"));
+		enterText(Logele.Pwd(), lp.prop.getProperty("pwd"));
+		Click(Logele.LgnBtn());
 	}
 
 }
