@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Failures.RunFailTest">
+      <class name="com.Tests.LoginPageTest">
         <methods>
-          <include name="main"/>
+          <include name="TearDown"/>
+          <include name="StartUp"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- com.Failures.RunFailTest -->
+      </class> <!-- com.Tests.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

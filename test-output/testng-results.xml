@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19541" started-at="2018-01-17T07:53:11Z" finished-at="2018-01-17T07:53:30Z">
+  <suite name="Default suite" duration-ms="30883" started-at="2018-01-18T07:08:05Z" finished-at="2018-01-18T07:08:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19541" started-at="2018-01-17T07:53:11Z" finished-at="2018-01-17T07:53:30Z">
-      <class name="com.Failures.RunFailTest">
-        <test-method status="PASS" signature="FailRun()[pri:0, instance:com.Failures.RunFailTest@2a5ca609]" name="FailRun" duration-ms="19504" started-at="2018-01-17T13:23:11Z" finished-at="2018-01-17T13:23:30Z">
+    <test name="Default test" duration-ms="30883" started-at="2018-01-18T07:08:05Z" finished-at="2018-01-18T07:08:36Z">
+      <class name="com.Tests.LoginPageTest">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="16957" started-at="2018-01-18T12:38:05Z" finished-at="2018-01-18T12:38:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FailRun -->
-      </class> <!-- com.Failures.RunFailTest -->
+        </test-method> <!-- StartUp -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="Login" duration-ms="13089" started-at="2018-01-18T12:38:22Z" finished-at="2018-01-18T12:38:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="769" started-at="2018-01-18T12:38:35Z" finished-at="2018-01-18T12:38:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.Tests.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

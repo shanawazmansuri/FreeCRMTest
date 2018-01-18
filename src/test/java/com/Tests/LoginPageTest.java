@@ -34,14 +34,14 @@ public class LoginPageTest extends Basepage {
 		driver.quit();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = false)
 	public void Logoverify() {
 
 		IsDisplayed(Logele.Logo());
 		ScreenShot.CaptureScreenshot(driver);
 	}
 
-	@Test(dataProvider = "LoginTest", priority = 2)
+	@Test(dataProvider = "LoginTest", priority = 2, enabled = false)
 	public void LoginTest(String Username, String Password) throws IOException {
 		enterText(Logele.UsrId(), Username);
 		enterText(Logele.Pwd(), Password);
@@ -67,10 +67,13 @@ public class LoginPageTest extends Basepage {
 
 	}
 
+	@Test(priority = 3)
 	public void Login() {
 		enterText(Logele.UsrId(), lp.prop.getProperty("usrname"));
 		enterText(Logele.Pwd(), lp.prop.getProperty("pwd"));
 		Click(Logele.LgnBtn());
+		FramebyName("mainpanel");
+		AssertTrueContains("User: Shanawaz Mansuri", Logele.UserHeader());
 	}
 
 }

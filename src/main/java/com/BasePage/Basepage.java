@@ -3,7 +3,9 @@ package com.BasePage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -182,7 +184,8 @@ public class Basepage {
 
 	// Element Displayed//
 	public void IsDisplayed(WebElement Element) {
-		if (Element.isDisplayed()) {
+		boolean IsDisplayed = Element.isDisplayed();
+		if (IsDisplayed == true) {
 			System.out.println("Element is Displayed");
 		} else {
 			System.out.println("Element is not Available");
@@ -192,7 +195,8 @@ public class Basepage {
 
 	// Element Enabled//
 	public void IsEnabled(WebElement Element) {
-		if (Element.isEnabled()) {
+		boolean IsEnabled = Element.isEnabled();
+		if (IsEnabled == true) {
 			System.out.println("Element is enabled");
 		} else {
 			System.out.println("Element is disabled");
@@ -201,10 +205,41 @@ public class Basepage {
 
 	// Element Selected//
 	public void IsSelected(WebElement Element) {
-		if (Element.isSelected()) {
+		boolean IsSelected = Element.isSelected();
+		if (IsSelected == true) {
 			System.out.println("Element is selected");
 		} else {
 			System.out.println("Element is not selected");
+		}
+	}
+
+	// IsDisplayedElements for List WebElements
+	public void IsDisplayedElements(List<WebElement> Elements, int index) {
+		boolean IsDisplayedElements = Elements.get(index).isDisplayed();
+		if (IsDisplayedElements == true) {
+			System.out.println("Element is Displayed");
+		} else {
+			System.out.println("Element is not Available");
+		}
+	}
+
+	// IsEnabledElements for List WebElements
+	public void IsEnabledElements(List<WebElement> Elements, int index) {
+		boolean IsEnabledElements = Elements.get(index).isEnabled();
+		if (IsEnabledElements == true) {
+			System.out.println("Element is enabled");
+		} else {
+			System.out.println("Element is disabled");
+		}
+	}
+
+	// IsSelectedElements for List WebElements
+	public void IsSelectedElements(List<WebElement> Elements, int index) {
+		boolean IsSelectedElements = Elements.get(index).isSelected();
+		if (IsSelectedElements == true) {
+			System.out.println("Element is enabled");
+		} else {
+			System.out.println("Element is disabled");
 		}
 	}
 
@@ -637,6 +672,67 @@ public class Basepage {
 	// Frames Parent
 	public void FrameParent() {
 		driver.switchTo().parentFrame();
+	}
+
+	// GetWindowHandlesCloseChildWindows
+	public void GetWindowHandlesCloseChildWindows() {
+		String MainWindow = driver.getWindowHandle();
+		Set<String> s1 = driver.getWindowHandles();
+		Iterator<String> i1 = s1.iterator();
+
+		while (i1.hasNext()) {
+			String ChildWindow = i1.next();
+
+			if (!MainWindow.equalsIgnoreCase(ChildWindow)) {
+				driver.switchTo().window(ChildWindow);
+				driver.close();
+
+			}
+			driver.switchTo().window(MainWindow);
+		}
+	}
+
+	// GetWindowHandle
+	public void GetWindowHandle() {
+		String MainWindow = driver.getWindowHandle();
+		String Homepg = driver.getWindowHandle();
+		System.out.println("Home page id is " + Homepg);
+	}
+
+	// GetWindowHandles
+	public void GetWindowHandles() {
+		String Homepg = driver.getWindowHandle();
+		System.out.println("Home page id is " + Homepg);
+		Set<String> windows = driver.getWindowHandles();
+		int no_windows = windows.size();
+		System.out.println("Number of window opened is " + no_windows);
+	}
+
+	public void SwitchtoParentWindow() {
+		Set<String> windows = driver.getWindowHandles();
+		Iterator iter = windows.iterator();
+		String Parentwindow = iter.next().toString();
+		System.out.println("current window id is " + Parentwindow);
+		driver.switchTo().window(Parentwindow);
+	}
+
+	public void SwitchtoChildWindow() {
+		Set<String> windows = driver.getWindowHandles();
+		int no_windows = windows.size();
+		System.out.println("Number of window opened is " + no_windows);
+		Iterator iter = windows.iterator();
+		String Parentwindow = iter.next().toString();
+		String childwindows = iter.next().toString();
+		System.out.println("current window id is " + Parentwindow);
+		System.out.println("current window id is " + childwindows);
+		driver.switchTo().window(childwindows);
+	}
+
+	public void Iterator(String window) {
+
+		Set<String> windows = driver.getWindowHandles();
+		Iterator iter = windows.iterator();
+		window = iter.next().toString();
 	}
 
 	// Click and Hold

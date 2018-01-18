@@ -45,4 +45,9 @@ public class LoginPageElements extends Basepage {
 		return Logo;
 	}
 
+	public WebElement UserHeader() {
+		WebElement UserHeader = Xpath(pro.prop.getProperty("UserHeader_Xpath"));
+		return UserHeader;
+	}
+
 }
