@@ -1,4 +1,4 @@
-package com.Failures;
+package com.Tests;
 
 import java.util.ArrayList;
 import java.util.List;

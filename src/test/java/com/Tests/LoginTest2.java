@@ -3,14 +3,14 @@ package com.Tests;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.BasePage.Basepage;
 import com.Page.Elements.LoginPageElements;
 import com.Utilities.PropertiesFile;
 
-@Listeners(com.Utilities.ExtentReporterNG.class)
+//@Listeners(com.Utilities.ExtentReporterNG.class)
+//@Listeners(com.Failures.MyTransformer.class)
 public class LoginTest2 extends Basepage {
 	LoginPageElements Logele;
 	PropertiesFile Pro;
@@ -34,7 +34,7 @@ public class LoginTest2 extends Basepage {
 
 		WebElement FrgPwdLnk = PartialLinkText("Forgot Password?");
 		FrgPwdLnk.click();
-		WebElement Usrname = Xpath("//input[@name='username'and@size='25']");
+		WebElement Usrname = Xpath("//input[@name='username'and@size='25s']");
 		enterText(Usrname, "shanawazmansuri1");
 		WebElement GetPwdBtn = Xpath("//input[@value='Get Password']");
 		Click(GetPwdBtn);
