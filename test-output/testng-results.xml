@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Failed suite [Default suite]" duration-ms="43160" started-at="2018-01-19T06:45:26Z" finished-at="2018-01-19T06:46:09Z">
+  <suite name="Default suite" duration-ms="43607" started-at="2018-01-27T21:20:29Z" finished-at="2018-01-27T21:21:13Z">
     <groups>
     </groups>
-    <test name="Default test(failed)" duration-ms="43160" started-at="2018-01-19T06:45:26Z" finished-at="2018-01-19T06:46:09Z">
+    <test name="Default test" duration-ms="43607" started-at="2018-01-27T21:20:29Z" finished-at="2018-01-27T21:21:13Z">
       <class name="com.Tests.LoginPageTest">
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@de0a01f]" name="StartUp" is-config="true" duration-ms="28880" started-at="2018-01-19T12:15:26Z" finished-at="2018-01-19T12:15:55Z">
+        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="StartUp" is-config="true" duration-ms="27044" started-at="2018-01-28T02:50:29Z" finished-at="2018-01-28T02:50:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginPageTest@de0a01f]" name="Login" duration-ms="13464" started-at="2018-01-19T12:15:55Z" finished-at="2018-01-19T12:16:08Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="Login" duration-ms="14974" started-at="2018-01-28T02:50:56Z" finished-at="2018-01-28T02:51:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@de0a01f]" name="TearDown" is-config="true" duration-ms="794" started-at="2018-01-19T12:16:08Z" finished-at="2018-01-19T12:16:09Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.LoginPageTest@3ffc5af1]" name="TearDown" is-config="true" duration-ms="1539" started-at="2018-01-28T02:51:11Z" finished-at="2018-01-28T02:51:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- com.Tests.LoginPageTest -->
-    </test> <!-- Default test(failed) -->
-  </suite> <!-- Failed suite [Default suite] -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

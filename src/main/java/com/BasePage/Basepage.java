@@ -35,19 +35,23 @@ public class Basepage {
 	public static WebDriver driver;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+	public static String path;
 
 	public WebDriver Browser(String BrowserName, String url) {
 
 		if (BrowserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Setup\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",
+					path = getClass().getClassLoader().getResource("geckodriver.exe").getPath());
 			driver = new FirefoxDriver();
 		} else if (BrowserName.equalsIgnoreCase("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",
+					path = getClass().getClassLoader().getResource("chromedriver.exe").getPath());
 			driver = new ChromeDriver();
 		} else if (BrowserName.equalsIgnoreCase("IE")) {
 
-			System.setProperty("webdriver.ie.driver", "D:\\Selenium\\Setup\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver",
+					path = getClass().getClassLoader().getResource("IEDriverServer.exe").getPath());
 			driver = new InternetExplorerDriver();
 		}
 

@@ -95,7 +95,7 @@ public class RegistrationTest extends Basepage {
 
 	@DataProvider(name = "DataEntry")
 	public Object[][] passData() {
-		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\RegistrationTest.xlsx";
+		String xlPath = this.getClass().getClassLoader().getResource("RegistrationTest.xlsx").getPath();
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
 		int rows = excl.getRowCount(0);
 

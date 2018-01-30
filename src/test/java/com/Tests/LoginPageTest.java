@@ -52,7 +52,7 @@ public class LoginPageTest extends Basepage {
 
 	@DataProvider(name = "LoginTest")
 	public Object[][] passData() {
-		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\LoginTest.xlsx";
+		String xlPath = this.getClass().getClassLoader().getResource("LoginTest.xlsx").getPath();
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
 		int rows = excl.getRowCount(1);
 
