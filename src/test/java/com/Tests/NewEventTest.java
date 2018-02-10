@@ -1,5 +1,10 @@
 package com.Tests;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -29,31 +34,44 @@ public class NewEventTest extends Basepage {
 		driver.quit();
 	}
 
-	@Test
-	public void ClickonNewEventMenu() {
+	@Test(dataProvider = "NewEventAdd1", priority = 1)
+	public void NewEventAdd1(String title, String frmDt, String toDt, String categ, String assTo, String cnf,
+			String emailAlt, String emailCnt, String remMin, String remType, String remnote, String intRem,
+			String ownerusr, String contact, String company, String deal, String task, String cases, String tags,
+			String location, String notes, String minutes, String demo) throws ParseException {
+
 		login.Login();
-		FramebyName("mainpanel");
 		Mousehover(nee.CalendarMenu());
 		Click(nee.NewEventSubmenu());
-
-	}
-
-	@Test(dataProvider = "NewEventAdd1")
-	public void NewEventAdd1(String title, String frmDt, String toDt, String categ, String cnf, String emailAlt,
-			String emailCnt, String remMin, String remType, String remnote, String intRem, String ownerusr,
-			String contact, String company, String deal, String task, String cases, String tags, String location,
-			String notes, String minutes) {
 		enterText(nee.title(), title);
-		DateEnter(driver, nee.fromdate(), frmDt);
-		DateEnter(driver, nee.todate(), toDt);
+		DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		Date startDate = sdf.parse(frmDt);
+		int dmo = Integer.parseInt(demo);
+		nee.title().sendKeys();
+
+		// String newStartDate = sdf.format(startDate);
+
+		/*
+		 * String startDateString = "06/27/2007"; DateFormat df = new
+		 * SimpleDateFormat("MM/dd/yyyy"); Date startDate; try { startDate =
+		 * df.parse(startDateString); String newDateString = df.format(startDate);
+		 * System.out.println(newDateString); } catch (ParseException e) {
+		 * e.printStackTrace(); }
+		 */
+		// nee.fromdate().sendKeys(newStartDate);
+		// nee.fromdate().sendKeys(toDt);
+		DateEnter(driver, nee.fromdate(), startDate);
+		// DateEnter(driver, nee.todate(), toDt);
 		Dropbyvisibletext(nee.category(), categ);
+		MultiSelect(nee.assignuseridfrom(), assTo);
 		Click(nee.assignuseridfrom());
 		Click(nee.addbtn());
 		Radiobuttons(nee.confirmedchkbx(), cnf);
 		Checkboxes(nee.emailalert(), emailAlt);
-		Checkboxes(nee.emailalert(), emailCnt);
+		Checkboxes(nee.emailaltcontact(), emailCnt);
 		Dropbyvisibletext(nee.reminderminutes(), remMin);
-		Dropbyvisibletext(nee.reminderminutes(), remType);
+		Wait(2000);
+		Dropbyvisibletext(nee.remindertype(), remType);
 		enterText(nee.notes(), remnote);
 		Checkboxes(nee.internalreminder(), intRem);
 		Dropbyvisibletext(nee.owneruserid(), ownerusr);
@@ -72,16 +90,34 @@ public class NewEventTest extends Basepage {
 
 	@DataProvider(name = "NewEventAdd1")
 	public Object[][] passData() {
-		String xlPath = this.getClass().getClassLoader().getResource("LoginTest.xlsx").getPath();
+		String xlPath = this.getClass().getClassLoader().getResource("NewEventTest.xlsx").getPath();
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
-		int rows = excl.getRowCount(1);
+		int rows = excl.getRowCount(0);
 
-		Object[][] data = new Object[rows][2];
+		Object[][] data = new Object[rows][22];
 		for (int i = 0; i < rows; i++) {
-
-			data[i][0] = excl.getData(1, i + 1, 0);
-			data[i][1] = excl.getData(1, i + 1, 1);
-
+			data[i][0] = excl.getData(0, i + 1, 0);
+			data[i][1] = excl.getData(0, i + 1, 1);
+			data[i][2] = excl.getData(0, i + 1, 2);
+			data[i][3] = excl.getData(0, i + 1, 3);
+			data[i][4] = excl.getData(0, i + 1, 4);
+			data[i][5] = excl.getData(0, i + 1, 5);
+			data[i][6] = excl.getData(0, i + 1, 6);
+			data[i][7] = excl.getData(0, i + 1, 7);
+			data[i][8] = excl.getData(0, i + 1, 8);
+			data[i][9] = excl.getData(0, i + 1, 9);
+			data[i][10] = excl.getData(0, i + 1, 10);
+			data[i][11] = excl.getData(0, i + 1, 11);
+			data[i][12] = excl.getData(0, i + 1, 12);
+			data[i][13] = excl.getData(0, i + 1, 13);
+			data[i][14] = excl.getData(0, i + 1, 14);
+			data[i][15] = excl.getData(0, i + 1, 15);
+			data[i][16] = excl.getData(0, i + 1, 16);
+			data[i][17] = excl.getData(0, i + 1, 17);
+			data[i][18] = excl.getData(0, i + 1, 18);
+			data[i][19] = excl.getData(0, i + 1, 19);
+			data[i][20] = excl.getData(0, i + 1, 20);
+			data[i][21] = excl.getData(0, i + 1, 21);
 		}
 		return data;
 

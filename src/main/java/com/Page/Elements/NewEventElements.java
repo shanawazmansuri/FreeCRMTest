@@ -49,7 +49,7 @@ public class NewEventElements extends Basepage {
 	}
 
 	public WebElement category() {
-		WebElement category = Name("validate_availability");
+		WebElement category = Name("category");
 		return category;
 	}
 

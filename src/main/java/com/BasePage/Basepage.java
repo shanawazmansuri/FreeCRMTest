@@ -3,6 +3,7 @@ package com.BasePage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -525,7 +526,7 @@ public class Basepage {
 	}
 
 	// Enter Date
-	public String DateEnter(WebDriver driver, WebElement element, String DateValue) {
+	public Date DateEnter(WebDriver driver, WebElement element, Date DateValue) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].setAttribute('value','" + DateValue + "');", element);
 		return DateValue;
@@ -567,7 +568,7 @@ public class Basepage {
 		List<String> list = new ArrayList<String>(Arrays.asList(value.split(",")));
 		for (String check : list) {
 			for (WebElement chk : element) {
-				if (chk.getAttribute("name").equalsIgnoreCase(check))
+				if (chk.getAttribute("value").equalsIgnoreCase(check))
 					chk.click();
 			}
 		}
@@ -648,7 +649,7 @@ public class Basepage {
 	public void AutoCompleteValues(List<WebElement> elements) {
 		for (WebElement eachele : elements) {
 			String AutoValues = eachele.getAttribute("innerHTML");
-			System.out.println("Values of Radio buttons are " + AutoValues);
+			System.out.println("Values of Auto Complete fields are " + AutoValues);
 		}
 	}
 
