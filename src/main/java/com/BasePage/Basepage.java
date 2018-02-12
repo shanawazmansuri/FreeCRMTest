@@ -3,7 +3,6 @@ package com.BasePage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -526,10 +525,10 @@ public class Basepage {
 	}
 
 	// Enter Date
-	public Date DateEnter(WebDriver driver, WebElement element, Date DateValue) {
+	public String DateEnter(WebDriver driver, WebElement element, String dateVal) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("arguments[0].setAttribute('value','" + DateValue + "');", element);
-		return DateValue;
+		js.executeScript("arguments[0].setAttribute('value','" + dateVal + "');", element);
+		return dateVal;
 
 	}
 

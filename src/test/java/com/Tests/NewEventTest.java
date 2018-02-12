@@ -1,10 +1,5 @@
 package com.Tests;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -34,34 +29,18 @@ public class NewEventTest extends Basepage {
 		driver.quit();
 	}
 
-	@Test(dataProvider = "NewEventAdd1", priority = 1)
+	@Test(dataProvider = "NewEventAdd1", priority = 1, enabled = true)
 	public void NewEventAdd1(String title, String frmDt, String toDt, String categ, String assTo, String cnf,
 			String emailAlt, String emailCnt, String remMin, String remType, String remnote, String intRem,
 			String ownerusr, String contact, String company, String deal, String task, String cases, String tags,
-			String location, String notes, String minutes, String demo) throws ParseException {
+			String location, String notes, String minutes) {
 
 		login.Login();
 		Mousehover(nee.CalendarMenu());
 		Click(nee.NewEventSubmenu());
 		enterText(nee.title(), title);
-		DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-		Date startDate = sdf.parse(frmDt);
-		int dmo = Integer.parseInt(demo);
-		nee.title().sendKeys();
-
-		// String newStartDate = sdf.format(startDate);
-
-		/*
-		 * String startDateString = "06/27/2007"; DateFormat df = new
-		 * SimpleDateFormat("MM/dd/yyyy"); Date startDate; try { startDate =
-		 * df.parse(startDateString); String newDateString = df.format(startDate);
-		 * System.out.println(newDateString); } catch (ParseException e) {
-		 * e.printStackTrace(); }
-		 */
-		// nee.fromdate().sendKeys(newStartDate);
-		// nee.fromdate().sendKeys(toDt);
-		DateEnter(driver, nee.fromdate(), startDate);
-		// DateEnter(driver, nee.todate(), toDt);
+		DateEnter(driver, nee.fromdate(), frmDt);
+		DateEnter(driver, nee.todate(), toDt);
 		Dropbyvisibletext(nee.category(), categ);
 		MultiSelect(nee.assignuseridfrom(), assTo);
 		Click(nee.assignuseridfrom());
@@ -72,7 +51,7 @@ public class NewEventTest extends Basepage {
 		Dropbyvisibletext(nee.reminderminutes(), remMin);
 		Wait(2000);
 		Dropbyvisibletext(nee.remindertype(), remType);
-		enterText(nee.notes(), remnote);
+		enterText(nee.remindernote(), remnote);
 		Checkboxes(nee.internalreminder(), intRem);
 		Dropbyvisibletext(nee.owneruserid(), ownerusr);
 		enterText(nee.contact(), contact);
@@ -122,5 +101,16 @@ public class NewEventTest extends Basepage {
 		return data;
 
 	}
+
+	// @Test(enabled = false)
+	// public void date() {
+	// login.Login();
+	// Mousehover(nee.CalendarMenu());
+	// Click(nee.NewEventSubmenu());
+	// DateEnter(driver, nee.fromdate(), "21-Feb-2018 23:47");
+	// DateEnter(driver, nee.todate(), "22-Feb-2018 23:47");
+	// Wait(5000);
+	//
+	// }
 
 }
