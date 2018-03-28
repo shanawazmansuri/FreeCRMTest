@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
@@ -529,6 +530,58 @@ public class Basepage {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].setAttribute('value','" + dateVal + "');", element);
 		return dateVal;
+
+	}
+
+	public void date() throws InterruptedException {
+
+		String date = "32-May-2017";
+		String dateArr[] = date.split("-"); // {18,September,2017}
+		String day = dateArr[0];
+		String month = dateArr[1];
+		String year = dateArr[2];
+
+		Select select = new Select(driver.findElement(By.name("slctMonth")));
+		select.selectByVisibleText(month);
+
+		Select select1 = new Select(driver.findElement(By.name("slctYear")));
+		select1.selectByVisibleText(year);
+
+		// *[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[1]
+		// *[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]
+		// *[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[6]
+
+		String beforeXpath = "//*[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr[";
+		String afterXpath = "]/td[";
+
+		final int totalWeekDays = 7;
+
+		// 2-1 2-2 2-3 2-4 2-5 2-6 2-7
+		// 3-2 3-2 3-3 3-4 3-5 3-6 3-7
+		boolean flag = false;
+		String dayVal = null;
+		for (int rowNum = 2; rowNum <= 7; rowNum++) {
+
+			for (int colNum = 1; colNum <= totalWeekDays; colNum++) {
+				try {
+					dayVal = driver.findElement(By.xpath(beforeXpath + rowNum + afterXpath + colNum + "]")).getText();
+				} catch (NoSuchElementException e) {
+					System.out.println("Please enter a correct date value");
+					flag = false;
+					break;
+				}
+				System.out.println(dayVal);
+				if (dayVal.equals(day)) {
+					driver.findElement(By.xpath(beforeXpath + rowNum + afterXpath + colNum + "]")).click();
+					flag = true;
+					break;
+				}
+			}
+			if (flag) {
+				break;
+			}
+
+		}
 
 	}
 
