@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import com.BasePage.Basepage;
 import com.Page.Elements.CasesElements;
-import com.Page.Elements.NewEventElements;
 import com.Utilities.ExcelDataConfig;
 
 public class CasesTest extends Basepage {
@@ -31,10 +30,11 @@ public class CasesTest extends Basepage {
 	}
 
 	@Test(dataProvider = "AddCases", priority = 1, enabled = true)
-	public void NewEventAdd1(String type, String title, String priority, String status, String deadline, String state,
+	public void NewCasesAdding(String type, String title, String priority, String status, String deadline, String state,
 			String identifier, String contact, String owner, String keycompany, String tags, String description) {
 
 		login.Login();
+		Wait(2000);
 		Mousehover(caseele.caseMenu());
 		Click(caseele.caseSubMenu());
 		Dropbyvisibletext(caseele.type(), type);
@@ -43,18 +43,25 @@ public class CasesTest extends Basepage {
 		Dropbyvisibletext(caseele.status(), status);
 		DateEnter(driver, caseele.deadLine(), deadline);
 		Radiobuttons(caseele.state(), state);
-
-		Click(nee.savebtn());
+		enterText(caseele.identifier(), identifier);
+		enterText(caseele.contact(), contact);
+		Dropbyvisibletext(caseele.ownerUid(), owner);
+		enterText(caseele.keyCompany(), keycompany);
+		enterText(caseele.tags(), tags);
+		enterText(caseele.description(), description);
+		Wait(2000);
+		Click(caseele.saveBtn());
+		Wait(2000);
 
 	}
 
-	@DataProvider(name = "NewEventAdd1")
+	@DataProvider(name = "AddCases")
 	public Object[][] passData() {
-		String xlPath = this.getClass().getClassLoader().getResource("NewEventTest.xlsx").getPath();
+		String xlPath = this.getClass().getClassLoader().getResource("NewCases.xlsx").getPath();
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
 		int rows = excl.getRowCount(0);
 
-		Object[][] data = new Object[rows][22];
+		Object[][] data = new Object[rows][12];
 		for (int i = 0; i < rows; i++) {
 			data[i][0] = excl.getData(0, i + 1, 0);
 			data[i][1] = excl.getData(0, i + 1, 1);
@@ -68,17 +75,9 @@ public class CasesTest extends Basepage {
 			data[i][9] = excl.getData(0, i + 1, 9);
 			data[i][10] = excl.getData(0, i + 1, 10);
 			data[i][11] = excl.getData(0, i + 1, 11);
-			data[i][12] = excl.getData(0, i + 1, 12);
-			data[i][13] = excl.getData(0, i + 1, 13);
-			data[i][14] = excl.getData(0, i + 1, 14);
-			data[i][15] = excl.getData(0, i + 1, 15);
-			data[i][16] = excl.getData(0, i + 1, 16);
-			data[i][17] = excl.getData(0, i + 1, 17);
-			data[i][18] = excl.getData(0, i + 1, 18);
-			data[i][19] = excl.getData(0, i + 1, 19);
-			data[i][20] = excl.getData(0, i + 1, 20);
-			data[i][21] = excl.getData(0, i + 1, 21);
 		}
 		return data;
 
 	}
+
+}
