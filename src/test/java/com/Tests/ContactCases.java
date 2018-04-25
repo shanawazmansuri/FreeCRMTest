@@ -26,7 +26,7 @@ public class ContactCases extends Basepage {
 		driver.quit();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = false)
 	public void selectCheckboxGrid() {
 
 		login.Login();
@@ -47,7 +47,7 @@ public class ContactCases extends Basepage {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, enabled = false)
 	public void selectCheckboxGridbyxpath() {
 
 		login.Login();
@@ -56,6 +56,26 @@ public class ContactCases extends Basepage {
 				By.xpath("//a[contains(text(),1.1)]/parent::td//preceding-sibling::td//input[@name='contact_id']"))
 				.click();
 		Wait(2000);
+
+	}
+
+	@Test(priority = 3)
+	public void byName() {
+
+		login.Login();
+		driver.findElement(By.xpath("//a[@title=\"Contacts\"]")).click();
+		driver.findElement(By.xpath("//a[@_name='Noor Mansuri']")).click();
+		Wait(9000);
+
+	}
+
+	@Test(priority = 3, enabled = false)
+	public void rightClickonName() {
+
+		login.Login();
+		driver.findElement(By.xpath("//a[@title=\"Contacts\"]")).click();
+		driver.findElement(By.xpath("//a[@_name='Noor Mansuri']")).click();
+		Wait(9000);
 
 	}
 }

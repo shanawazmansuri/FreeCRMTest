@@ -5,8 +5,9 @@
     <classes>
       <class name="com.Tests.ContactCases">
         <methods>
-          <include name="selectCheckboxGrid"/>
           <include name="StartUp"/>
+          <include name="TearDown"/>
+          <include name="byName"/>
         </methods>
       </class> <!-- com.Tests.ContactCases -->
     </classes>

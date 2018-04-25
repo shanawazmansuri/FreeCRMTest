@@ -89,7 +89,7 @@ public class CasesElements extends Basepage {
 	}
 
 	public WebElement saveBtn() {
-		WebElement saveBtn = Xpath("//input[@value='Save']");
+		WebElement saveBtn = Xpath("//*[@id=\"caseForm\"]/table/tbody/tr[7]/td/input");
 		return saveBtn;
 	}
 
