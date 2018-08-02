@@ -1,5 +1,7 @@
 package com.Page.Elements;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 
 import com.BasePage.Basepage;
@@ -16,8 +18,8 @@ public class CallElements extends Basepage {
 		return NewCasemenu;
 	}
 
-	public WebElement callSchedulechk() {
-		WebElement callschedulechk = Name("scheduled_call");
+	public List<WebElement> callSchedulechk() {
+		List<WebElement> callschedulechk = Elements("//input[@name='scheduled_call']");
 		return callschedulechk;
 	}
 
@@ -76,9 +78,59 @@ public class CallElements extends Basepage {
 		return flagas;
 	}
 
+	public WebElement started() {
+		WebElement started = Id("fieldId_start_time");
+		return started;
+	}
+
+	public WebElement ended() {
+		WebElement ended = Name("end_time_hour");
+		return ended;
+	}
+
+	public WebElement endedText() {
+		WebElement endedtext = Name("end_time_minute");
+		return endedtext;
+	}
+
+	public WebElement state() {
+		WebElement state = Name("closed");
+		return state;
+	}
+
+	public WebElement owner() {
+		WebElement owner = Id("owner_user_id");
+		return owner;
+	}
+
+	public WebElement deal() {
+		WebElement deal = Name("prospect_lookup");
+		return deal;
+	}
+
+	public WebElement task() {
+		WebElement task = Name("task_lookup");
+		return task;
+	}
+
+	public WebElement ccase() {
+		WebElement ccase = Name("case_lookup");
+		return ccase;
+	}
+
+	public WebElement notes() {
+		WebElement notes = Name("notes");
+		return notes;
+	}
+
 	public WebElement saveBtn() {
 		WebElement SaveBtn = Xpath("//*[@id=\"callForm\"]/table/tbody/tr[1]/td/input[1]");
 		return SaveBtn;
+	}
+
+	public WebElement saveAndcallNowBtn() {
+		WebElement saveandcallnowbtn = Name("saveandcall");
+		return saveandcallnowbtn;
 	}
 
 }

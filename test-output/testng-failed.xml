@@ -5,9 +5,7 @@
     <classes>
       <class name="com.Tests.CallTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="addWithNovalues"/>
-          <include name="startUp"/>
+          <include name="newCalladding"/>
         </methods>
       </class> <!-- com.Tests.CallTest -->
     </classes>
