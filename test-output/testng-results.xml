@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92011" started-at="2018-04-25T07:24:53Z" finished-at="2018-04-25T07:26:25Z">
+  <suite name="Default suite" duration-ms="74789" started-at="2018-07-25T08:09:26Z" finished-at="2018-07-25T08:10:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92011" started-at="2018-04-25T07:24:53Z" finished-at="2018-04-25T07:26:25Z">
-      <class name="com.Tests.ContactCases">
-        <test-method status="PASS" signature="StartUp()[pri:0, instance:com.Tests.ContactCases@5e5792a0]" name="StartUp" is-config="true" duration-ms="47949" started-at="2018-04-25T12:54:53Z" finished-at="2018-04-25T12:55:41Z">
+    <test name="Default test" duration-ms="74789" started-at="2018-07-25T08:09:26Z" finished-at="2018-07-25T08:10:40Z">
+      <class name="com.Tests.CallTest">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.Tests.CallTest@5e5792a0]" name="startUp" is-config="true" duration-ms="40255" started-at="2018-07-25T13:39:26Z" finished-at="2018-07-25T13:40:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartUp -->
-        <test-method status="PASS" signature="byName()[pri:0, instance:com.Tests.ContactCases@5e5792a0]" name="byName" duration-ms="43095" started-at="2018-04-25T12:55:41Z" finished-at="2018-04-25T12:56:24Z">
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="addWithNovalues()[pri:0, instance:com.Tests.CallTest@5e5792a0]" name="addWithNovalues" duration-ms="33022" started-at="2018-07-25T13:40:06Z" finished-at="2018-07-25T13:40:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- byName -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.ContactCases@5e5792a0]" name="TearDown" is-config="true" duration-ms="926" started-at="2018-04-25T12:56:24Z" finished-at="2018-04-25T12:56:25Z">
+        </test-method> <!-- addWithNovalues -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.Tests.CallTest@5e5792a0]" name="TearDown" is-config="true" duration-ms="1487" started-at="2018-07-25T13:40:39Z" finished-at="2018-07-25T13:40:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.Tests.ContactCases -->
+      </class> <!-- com.Tests.CallTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

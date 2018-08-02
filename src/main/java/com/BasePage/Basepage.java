@@ -360,6 +360,7 @@ public class Basepage {
 	// Implicit Wait///
 	public void Implicitwait(int time) {
 		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+
 	}
 
 	// Explicit Wait//
