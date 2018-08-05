@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.BasePage.Basepage;
 import com.Page.Elements.CallElements;
 import com.Utilities.ExcelDataConfig;
+import com.Utilities.ScreenShot;
 
 public class CallTest extends Basepage {
 
@@ -16,6 +17,7 @@ public class CallTest extends Basepage {
 
 	@BeforeMethod
 	public void startUp() {
+
 		Browser("chrome", "https://www.freecrm.com/index.html");
 		MaximizeBrowser();
 		DeleteCookies();
@@ -43,12 +45,15 @@ public class CallTest extends Basepage {
 		Dropbyvisibletext(callele.reminder(), remmin);
 		Dropbyvisibletext(callele.reminderType(), remtype);
 		enterText(callele.reminderNote(), remnotes);
+		Wait(5000);
+		ScreenShot.CaptureScreenshot(driver);
 		Click(callele.saveBtn());
+
 	}
 
 	@DataProvider(name = "AddCall")
 	public Object[][] createCall() {
-		String xlPath = this.getClass().getClassLoader().getResource("NewCallTest.xlsx").getPath();
+		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\NewCallTest.xlsx";
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
 		int rows = excl.getRowCount(0);
 

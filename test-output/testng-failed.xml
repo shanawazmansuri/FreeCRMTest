@@ -5,7 +5,9 @@
     <classes>
       <class name="com.Tests.CallTest">
         <methods>
-          <include name="newCalladding"/>
+          <include name="TearDown"/>
+          <include name="newCalladding" invocation-numbers="0 1 2 3"/>
+          <include name="startUp"/>
         </methods>
       </class> <!-- com.Tests.CallTest -->
     </classes>

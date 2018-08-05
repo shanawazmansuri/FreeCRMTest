@@ -31,7 +31,7 @@ public class RegistrationTest extends Basepage {
 		CloseBrowser();
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void FieldMessageValidate() {
 
 		Click(ele.SignUpBtn());
@@ -58,7 +58,7 @@ public class RegistrationTest extends Basepage {
 
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void ValidateSubmitBtnAgreeEditionMsg() {
 
 		Click(ele.SignUpBtn());
@@ -117,7 +117,7 @@ public class RegistrationTest extends Basepage {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4, enabled = false)
 	public void EditionValues() {
 		Click(ele.SignUpBtn());
 		DropDownValues(ele.Edition());
@@ -125,7 +125,7 @@ public class RegistrationTest extends Basepage {
 		DropSelectedValues(ele.Edition());
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5, enabled = false)
 	public void ValiadteIAgreeSelected() {
 		Click(ele.SignUpBtn());
 		boolean AgreeStatus = ele.AgreeTerms().get(0).isSelected();
