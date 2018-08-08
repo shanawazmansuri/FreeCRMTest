@@ -88,7 +88,7 @@ public class RegistrationTest extends Basepage {
 		enterText(ele.Username(), Usrname);
 		enterText(ele.Password(), Pwd);
 		enterText(ele.PasswordConfirm(), ConfPwd);
-		Checkboxes(ele.AgreeTerms(), Agree);
+		Checkboxes(ele.AgreeTerms(), Agree, "value");
 		ScreenShot.CaptureScreenshot(driver);
 
 	}

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Tests.CallTest">
+      <class name="com.Tests.RegistrationTest">
         <methods>
+          <include name="StartUp"/>
+          <include name="CreateRegistration" invocation-numbers="0 1 2 3 4"/>
           <include name="TearDown"/>
-          <include name="newCalladding" invocation-numbers="0 1 2 3"/>
-          <include name="startUp"/>
         </methods>
-      </class> <!-- com.Tests.CallTest -->
+      </class> <!-- com.Tests.RegistrationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

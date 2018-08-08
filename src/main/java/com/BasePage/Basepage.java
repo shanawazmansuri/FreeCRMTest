@@ -630,9 +630,9 @@ public class Basepage {
 	}
 
 	// Radio button//
-	public void Radiobuttons(List<WebElement> elements, String value) {
+	public void Radiobuttons(List<WebElement> elements, String value, String attribute) {
 		for (WebElement element : elements) {
-			String Radios = element.getAttribute("value");
+			String Radios = element.getAttribute(attribute);
 			if (Radios.equalsIgnoreCase(value)) {
 				element.click();
 			}
@@ -640,19 +640,19 @@ public class Basepage {
 	}
 
 	// Radio Button values
-	public void RadioButtonValues(List<WebElement> elements) {
+	public void RadioButtonValues(List<WebElement> elements, String attribute) {
 		for (WebElement eachele : elements) {
-			String RadioValues = eachele.getAttribute("value");
+			String RadioValues = eachele.getAttribute(attribute);
 			System.out.println("Radio buttons values are " + RadioValues);
 		}
 	}
 
 	// check boxes//
-	public void Checkboxes(List<WebElement> element, String value) {
+	public void Checkboxes(List<WebElement> element, String value, String attribute) {
 		List<String> list = new ArrayList<String>(Arrays.asList(value.split(",")));
 		for (String check : list) {
 			for (WebElement chk : element) {
-				if (chk.getAttribute("value").equalsIgnoreCase(check))
+				if (chk.getAttribute(attribute).equalsIgnoreCase(check))
 					chk.click();
 			}
 		}
@@ -668,9 +668,10 @@ public class Basepage {
 	}
 
 	// Checkboxes values
-	public void CheckboxesValues(List<WebElement> elements) {
+	public void CheckboxesValues(List<WebElement> elements, String attribute) {
+
 		for (WebElement eachele : elements) {
-			String CheckValues = eachele.getAttribute("value");
+			String CheckValues = eachele.getAttribute(attribute);
 			System.out.println("Checkboxes values are " + CheckValues);
 		}
 	}

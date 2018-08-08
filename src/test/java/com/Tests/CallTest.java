@@ -40,7 +40,7 @@ public class CallTest extends Basepage {
 		login.Login();
 		Mousehover(callele.casemenu());
 		Click(callele.newCasemenu());
-		Checkboxes(callele.callSchedulechk(), callsch);
+		Checkboxes(callele.callSchedulechk(), callsch, "value");
 		DateEnter(driver, callele.callScheduleDt(), callschdt);
 		Dropbyvisibletext(callele.reminder(), remmin);
 		Dropbyvisibletext(callele.reminderType(), remtype);

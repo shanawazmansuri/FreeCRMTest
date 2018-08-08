@@ -42,7 +42,7 @@ public class CasesTest extends Basepage {
 		Dropbyvisibletext(caseele.priority(), priority);
 		Dropbyvisibletext(caseele.status(), status);
 		DateEnter(driver, caseele.deadLine(), deadline);
-		Radiobuttons(caseele.state(), state);
+		Radiobuttons(caseele.state(), state, "name");
 		enterText(caseele.identifier(), identifier);
 		enterText(caseele.contact(), contact);
 		Dropbyvisibletext(caseele.ownerUid(), owner);

@@ -45,14 +45,14 @@ public class NewEventTest extends Basepage {
 		MultiSelect(nee.assignuseridfrom(), assTo);
 		Click(nee.assignuseridfrom());
 		Click(nee.addbtn());
-		Radiobuttons(nee.confirmedchkbx(), cnf);
-		Checkboxes(nee.emailalert(), emailAlt);
-		Checkboxes(nee.emailaltcontact(), emailCnt);
+		Radiobuttons(nee.confirmedchkbx(), cnf, "value");
+		Checkboxes(nee.emailalert(), emailAlt, "value");
+		Checkboxes(nee.emailaltcontact(), emailCnt, "value");
 		Dropbyvisibletext(nee.reminderminutes(), remMin);
 		Wait(2000);
 		Dropbyvisibletext(nee.remindertype(), remType);
 		enterText(nee.remindernote(), remnote);
-		Checkboxes(nee.internalreminder(), intRem);
+		Checkboxes(nee.internalreminder(), intRem, "value");
 		Dropbyvisibletext(nee.owneruserid(), ownerusr);
 		enterText(nee.contact(), contact);
 		enterText(nee.company(), company);
