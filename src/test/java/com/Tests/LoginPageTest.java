@@ -38,7 +38,7 @@ public class LoginPageTest extends Basepage {
 	public void Logoverify() {
 
 		IsDisplayed(Logele.Logo());
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/LoginPage/", "Login");
 	}
 
 	@Test(dataProvider = "LoginTest", priority = 2, enabled = false)

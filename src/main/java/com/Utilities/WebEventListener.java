@@ -51,7 +51,7 @@ public class WebEventListener extends Basepage implements WebDriverEventListener
 
 	public void onException(Throwable error, WebDriver driver) {
 		System.out.println("Exception occured: " + error);
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/FailedCases/", "FailedCases");
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {

@@ -28,9 +28,9 @@ public class ForgotPwdTest extends Basepage {
 
 		Click(FrgPwd.FrgPwdLnk());
 		enterText(FrgPwd.FrgPwdUsrname(), pro.prop.getProperty("usrname"));
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/ForgotPwd/", "ForgotPwd");
 		Click(FrgPwd.GetPwdBtn());
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/ForgotPwd/", "ForgotPwd");
 		String message = Gettext(FrgPwd.GetPwdMsg());
 		AssertEquals(FrgPwd.GetPwdMsg(), "Your login detail have been sent to the email address on file.");
 
@@ -41,9 +41,9 @@ public class ForgotPwdTest extends Basepage {
 
 		Click(FrgPwd.FrgPwdLnk());
 		enterText(FrgPwd.FrgPwdUsrname(), "shanawaz.mansuri1");
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/ForgotPwd/", "ForgotPwd");
 		Click(FrgPwd.GetPwdBtn());
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/ForgotPwd/", "ForgotPwd");
 		String message = Gettext(FrgPwd.GetPwdMsg());
 		AssertTrueContains("We could not retrieve your login details. Please contact us at info@crmpro.com.",
 				FrgPwd.GetPwdMsg());

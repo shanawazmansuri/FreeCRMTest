@@ -14,10 +14,10 @@ import com.BasePage.Basepage;
 
 public class ScreenShot extends Basepage {
 
-	public static void CaptureScreenshot(WebDriver driver) {
+	public static void CaptureScreenshot(WebDriver driver, String scrPath, String scrPrefix) {
 		String path = System.getProperty("user.dir");
-		String scrPath = path + "/ScreenShots/Call/";
-		String scrPrefix = "Call";
+		String sourcePath = path + scrPath;
+		String prefix = scrPrefix;
 
 		SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		final String timeStamp = date.format(Calendar.getInstance().getTime());
@@ -25,7 +25,7 @@ public class ScreenShot extends Basepage {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		try {
-			FileUtils.copyFile(src, new File(scrPath + scrPrefix + timeStamp + ".jpeg"));
+			FileUtils.copyFile(src, new File(sourcePath + prefix + timeStamp + ".jpeg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

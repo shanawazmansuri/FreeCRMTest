@@ -47,7 +47,7 @@ public class RegistrationTest extends Basepage {
 		enterText(ele.Password(), "aaaaa");
 		enterText(ele.PasswordConfirm(), "11111");
 		IsEnabled(ele.SubmitBtn());
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/Registration/", "Registration");
 		AssertEquals(ele.MsgFirstName(), "Please enter your first name");
 		AssertEquals(ele.MsgLastName(), "Please enter your surname");
 		AssertEquals(ele.MsgmEail(), "Invalid Email Address");
@@ -71,7 +71,7 @@ public class RegistrationTest extends Basepage {
 		enterText(ele.PasswordConfirm(), "Aalahazrat@1");
 		IsEnabled(ele.SubmitBtn());
 		Click(ele.SubmitBtn());
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/Registration/", "Registration");
 		AssertEquals(ele.MsgEdition(), "Please select one Edition mode");
 		AssertEquals(ele.MsgAgree(), "You must agree to the Terms and Conditions before continuing");
 	}
@@ -88,14 +88,15 @@ public class RegistrationTest extends Basepage {
 		enterText(ele.Username(), Usrname);
 		enterText(ele.Password(), Pwd);
 		enterText(ele.PasswordConfirm(), ConfPwd);
-		Checkboxes(ele.AgreeTerms(), Agree, "value");
-		ScreenShot.CaptureScreenshot(driver);
+		Checkboxes(ele.AgreeTerms(), Agree, "name");
+		Wait(2000);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/Registration/", "Registration");
 
 	}
 
 	@DataProvider(name = "DataEntry")
 	public Object[][] passData() {
-		String xlPath = this.getClass().getClassLoader().getResource("RegistrationTest.xlsx").getPath();
+		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\RegistrationTest.xlsx";
 		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
 		int rows = excl.getRowCount(0);
 

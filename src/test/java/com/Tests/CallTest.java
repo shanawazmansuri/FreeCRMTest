@@ -1,5 +1,9 @@
 package com.Tests;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -34,7 +38,7 @@ public class CallTest extends Basepage {
 		Click(callele.saveBtn());
 	}
 
-	@Test(dataProvider = "AddCall", priority = 1, enabled = true)
+	@Test(dataProvider = "AddCall", priority = 1, enabled = false)
 	public void newCalladding(String callsch, String callschdt, String remmin, String remtype, String remnotes) {
 
 		login.Login();
@@ -46,7 +50,7 @@ public class CallTest extends Basepage {
 		Dropbyvisibletext(callele.reminderType(), remtype);
 		enterText(callele.reminderNote(), remnotes);
 		Wait(5000);
-		ScreenShot.CaptureScreenshot(driver);
+		ScreenShot.CaptureScreenshot(driver, "/ScreenShots/Call/", "Call");
 		Click(callele.saveBtn());
 
 	}
@@ -67,6 +71,27 @@ public class CallTest extends Basepage {
 
 		}
 		return data;
+	}
+
+	@Test(description = "Search", priority = 1, enabled = true)
+	public void searchContact() {
+
+		login.Login();
+		Mousehover(callele.casemenu());
+		Click(callele.newCasemenu());
+		enterText(callele.calltoContact(), "Naw");
+		driver.findElement(By.xpath("//*[@id=\"callDbLookup\"]/table/tbody/tr[1]/td[2]/input[4]")).click();
+		List<WebElement> text = driver.findElements(By.xpath("//td[@class='datafield']/a"));
+		for (WebElement elem : text) {
+
+			String textname = elem.getAttribute("innerHTML");
+			System.out.println("Values are " + textname);
+			if (textname.equalsIgnoreCase("Nawaz")) {
+				elem.click();
+
+			}
+		}
+
 	}
 
 	@AfterMethod
