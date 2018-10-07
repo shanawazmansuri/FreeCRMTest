@@ -16,7 +16,7 @@ import com.Utilities.ScreenShot;
 
 @Listeners(com.Utilities.ExtentReporterNG.class)
 public class LoginPageTest extends Basepage {
-	LoginPageElements Logele = new LoginPageElements(driver);
+	LoginPageElements Logele = new LoginPageElements();
 	PropertiesFile lp = new PropertiesFile();
 
 	@BeforeMethod

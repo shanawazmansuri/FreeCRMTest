@@ -9,12 +9,13 @@ import org.testng.annotations.Test;
 
 import com.BasePage.Basepage;
 import com.Page.Elements.RegistrationElements;
-import com.Utilities.ExcelDataConfig;
+import com.Utilities.ExcelUtils;
 import com.Utilities.ScreenShot;
 
 @Listeners(com.Utilities.ExtentReporterNG.class)
 public class RegistrationTest extends Basepage {
 	RegistrationElements ele = new RegistrationElements(driver);
+	static String projectPath = System.getProperty("user.dir");
 
 	@BeforeMethod
 	public void StartUp() {
@@ -95,28 +96,30 @@ public class RegistrationTest extends Basepage {
 	}
 
 	@DataProvider(name = "DataEntry")
-	public Object[][] passData() {
-		String xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\RegistrationTest.xlsx";
-		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
-		int rows = excl.getRowCount(0);
-
-		Object[][] data = new Object[rows][9];
-		for (int i = 0; i < rows; i++) {
-
-			data[i][0] = excl.getData(0, i + 1, 0);
-			data[i][1] = excl.getData(0, i + 1, 1);
-			data[i][2] = excl.getData(0, i + 1, 2);
-			data[i][3] = excl.getData(0, i + 1, 3);
-			data[i][4] = excl.getData(0, i + 1, 4);
-			data[i][5] = excl.getData(0, i + 1, 5);
-			data[i][6] = excl.getData(0, i + 1, 6);
-			data[i][7] = excl.getData(0, i + 1, 7);
-			data[i][8] = excl.getData(0, i + 1, 8);
-
-		}
+	public Object[][] testExcelData() {
+		Object[][] data = ExcelUtils.excelData(projectPath + "/TestData/RegistrationTest.xlsx", "Sheet1");
 		return data;
 
 	}
+
+	/*
+	 * @DataProvider(name = "DataEntry") public Object[][] passData() { String
+	 * xlPath = "D:\\Selenium\\Codes\\FreeCRM\\TestData\\RegistrationTest.xlsx";
+	 * ExcelDataConfig excl = new ExcelDataConfig(xlPath); int rows =
+	 * excl.getRowCount(0);
+	 * 
+	 * Object[][] data = new Object[rows][9]; for (int i = 0; i < rows; i++) {
+	 * 
+	 * data[i][0] = excl.getData(0, i + 1, 0); data[i][1] = excl.getData(0, i + 1,
+	 * 1); data[i][2] = excl.getData(0, i + 1, 2); data[i][3] = excl.getData(0, i +
+	 * 1, 3); data[i][4] = excl.getData(0, i + 1, 4); data[i][5] = excl.getData(0, i
+	 * + 1, 5); data[i][6] = excl.getData(0, i + 1, 6); data[i][7] = excl.getData(0,
+	 * i + 1, 7); data[i][8] = excl.getData(0, i + 1, 8);
+	 * 
+	 * } return data;
+	 * 
+	 * }
+	 */
 
 	@Test(priority = 4, enabled = false)
 	public void EditionValues() {

@@ -1,6 +1,7 @@
 package com.Utilities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
@@ -107,6 +108,42 @@ public class WebEventListener extends Basepage implements WebDriverEventListener
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public <X> void afterGetScreenshotAs(OutputType<X> arg0, X arg1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void afterGetText(WebElement arg0, WebDriver arg1, String arg2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public <X> void beforeGetScreenshotAs(OutputType<X> arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void beforeGetText(WebElement arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void beforeSwitchToWindow(String arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
 
 	}

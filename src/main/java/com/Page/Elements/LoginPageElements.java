@@ -1,6 +1,5 @@
 package com.Page.Elements;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.BasePage.Basepage;
@@ -9,10 +8,6 @@ import com.Utilities.PropertiesFile;
 public class LoginPageElements extends Basepage {
 
 	PropertiesFile pro = new PropertiesFile();
-
-	public LoginPageElements(WebDriver driver) {
-		this.driver = driver;
-	}
 
 	public WebElement UsrId() {
 

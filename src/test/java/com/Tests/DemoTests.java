@@ -14,7 +14,7 @@ import com.Utilities.PropertiesFile;
 
 public class DemoTests extends Basepage {
 
-	LoginPageElements Logele = new LoginPageElements(driver);
+	LoginPageElements Logele = new LoginPageElements();
 	PropertiesFile lp = new PropertiesFile();
 
 	@BeforeMethod
